@@ -628,3 +628,16 @@ def integrate_category_search(model: MathWeightModel, matrix: SpeculativeMatrix,
         qv = cell_feature_vector(ranked[0])
         external = adapter.search(category, qv, limit=min(10, len(ranked)))
     return {"ranked_count": len(ranked), "external_results": external, "model_nodes": len(model.nodes), "log_tail": model.log[-5:]}
+
+# Add-ons: mathematical shortcuts (shortened hashes and arithmetic values)
+from .shortcuts import (
+    ShortAddons,
+    b62_decode,
+    b62_encode,
+    compress_arith_value,
+    pack_u64,
+    shorten_hash,
+    shortcut_div_small,
+    shortcut_mul_small,
+    unpack_u64,
+)
