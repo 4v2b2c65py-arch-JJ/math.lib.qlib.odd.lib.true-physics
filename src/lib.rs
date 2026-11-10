@@ -2,6 +2,9 @@ use std::collections::{HashMap, hash_map::DefaultHasher};
 use std::hash::{Hash, Hasher};
 use std::time::{Duration, Instant};
 
+pub mod elements;
+
+
 /// Spatial address for a times-plank output.
 #[derive(Debug, Clone, Copy, PartialEq, Eq, Hash)]
 pub struct Address {

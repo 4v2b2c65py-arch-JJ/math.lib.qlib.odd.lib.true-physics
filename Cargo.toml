@@ -12,3 +12,10 @@ name = "mathlib_bench"
 path = "src/bin/bench.rs"
 
 [dependencies]
+
+[package.metadata.query]
+field = "elements"
+scope = "earth"
+sets = ["periodic_table_all"]
+count = 118
+description = "Query field for Cargo using all available element sets on Earth (periodic table elements 1-118)."
