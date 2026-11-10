@@ -10,11 +10,24 @@ def main(argv=None):
         from .mcp_server import main as mcp_main
         mcp_main()
         return 0
-    # GPU backends (Vulkan/CUDA) connection/probe: python -m mathlib_py gpu
-    if argv and argv[0] in ("gpu", "vulkan", "cuda", "backends"):
-        from .gpu_backends import main as gpu_main
-        gpu_main()
+    # GPU backends (Vulkan/CUDA) connection/probe/transfer: python -m mathlib_py gpu [...]
+    if argv and argv[0] in ("gpu", "vulkan", "cuda", "backends", "gpu-transfer", "transfer"):
+        from . import gpu_backends as gb
+        if argv[0] in ("gpu-transfer", "transfer") or (len(argv) > 1 and argv[1] in ("transfer", "move", "vram", "stage")):
+            sub = argv[1:] if argv[0] in ("gpu-transfer", "transfer") else argv[2:]
+            return gb._cli_transfer(sub)
+        deep = "--deep" in argv or "-d" in argv
+        prefer = None
+        for a in argv[1:]:
+            if a in ("vulkan", "cuda"):
+                prefer = a
+        print(json.dumps(gb.connect_backends(prefer=prefer, deep=deep), indent=2, default=str))
         return 0
+
+    # Custom runtime: python -m mathlib_py runtime [status|probe|detect|transfer|init|save] ...
+    if argv and argv[0] in ("runtime", "custom-runtime"):
+        from .custom_runtime import _cli as runtime_cli
+        return runtime_cli(argv[1:])
 
     # ASCII video mode: python -m mathlib_py ascii --op mul --base 8 --xs 1,2,4,8,100,1000
     if argv and argv[0] in ("ascii", "video", "ascii-video"):

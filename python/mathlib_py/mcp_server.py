@@ -138,11 +138,72 @@ def speculative_category_refine(base_value: int = 8, n: int = 12, op: str = "mul
 
 
 @mcp.tool()
+def custom_runtime(
+    cmd: str = "status",
+    config: str = "",
+    source: str = "",
+    target: str = "",
+    device: str = "",
+    out: str = "",
+    data: Optional[list] = None,
+    file: str = "",
+    deep: bool = False,
+    enable_mocks: bool = False,
+    force_load: bool = False,
+    mock_devices: Optional[list] = None,
+    force_load_functions: Optional[list] = None,
+    require_null_place_turn: bool = True,
+    turn: Optional[dict] = None,
+    slot: Optional[str] = None,
+) -> dict:
+    """Custom runtime: cmd=status|probe|detect|transfer|force-load|place-turn. Config as JSON or @path. Supports device mocks, force-load, and place_turn requiring null slot."""
+    from .custom_runtime import CustomRuntime
+    rt = CustomRuntime.from_config(config or None)
+    if source: rt.config.default_source = source
+    if target: rt.config.default_target = target
+    if device: rt.config.device = device
+    if enable_mocks:
+        rt.config.enable_mocks = True
+    if mock_devices is not None:
+        rt.config.mock_devices = mock_devices
+    if force_load:
+        rt.config.force_load = True
+    if force_load_functions is not None:
+        rt.config.force_load_functions = force_load_functions
+    rt.config.require_null_for_place_turn = bool(require_null_place_turn)
+    if cmd == "probe":
+        return rt.probe(deep=deep)
+    if cmd == "detect":
+        return rt.detect_cards(deep=deep)
+    if cmd == "force-load":
+        return rt.force_load()
+    if cmd == "place-turn":
+        slot_val = None if slot in (None, "", "null", "None") else slot
+        return rt.place_turn(turn=turn, slot=slot_val)
+    if cmd == "transfer":
+        payload = data
+        if file:
+            payload = {"file": file}
+        return rt.transfer(data=payload, source=source or None, target=target or None, out=out or None, device=device or None, deep=deep)
+    return rt.status()
+
+
+@mcp.tool()
 def gpu_backends(prefer: str = "") -> dict:
     """Probe/connect Vulkan and CUDA GPU backends and return unified status/bridge info."""
     from .gpu_backends import connect_backends
     pref = prefer if prefer in ("vulkan", "cuda") else None
     return connect_backends(prefer=pref)
+
+
+@mcp.tool()
+def gpu_vram_transfer(data: Optional[list] = None, file: str = "", source: str = "auto", target: str = "host", out: str = "", device: str = "") -> dict:
+    """Host-staged VRAM/buffer assistance transfer. Supports host payloads and CUDA staging via Leviathan env; direct cross-vendor RX580->CUDA VRAM offload is not possible."""
+    from .gpu_backends import transfer_vram
+    payload = data
+    if file:
+        payload = {"file": file}
+    return transfer_vram(data=payload, source=source, target=target, out=out or None, device=device or None, deep=False)
 
 
 def main() -> None:
