@@ -137,6 +137,14 @@ def speculative_category_refine(base_value: int = 8, n: int = 12, op: str = "mul
     return {"matrix_cells": len(m.cells), "ranked": len(ranked), **res}
 
 
+@mcp.tool()
+def gpu_backends(prefer: str = "") -> dict:
+    """Probe/connect Vulkan and CUDA GPU backends and return unified status/bridge info."""
+    from .gpu_backends import connect_backends
+    pref = prefer if prefer in ("vulkan", "cuda") else None
+    return connect_backends(prefer=pref)
+
+
 def main() -> None:
     mcp.run()
 

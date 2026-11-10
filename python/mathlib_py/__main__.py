@@ -10,6 +10,12 @@ def main(argv=None):
         from .mcp_server import main as mcp_main
         mcp_main()
         return 0
+    # GPU backends (Vulkan/CUDA) connection/probe: python -m mathlib_py gpu
+    if argv and argv[0] in ("gpu", "vulkan", "cuda", "backends"):
+        from .gpu_backends import main as gpu_main
+        gpu_main()
+        return 0
+
     # ASCII video mode: python -m mathlib_py ascii --op mul --base 8 --xs 1,2,4,8,100,1000
     if argv and argv[0] in ("ascii", "video", "ascii-video"):
         from .ascii_vid import generate_ascii_video_from_series, play_ascii_video
