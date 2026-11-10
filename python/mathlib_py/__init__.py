@@ -641,3 +641,12 @@ from .shortcuts import (
     shortcut_mul_small,
     unpack_u64,
 )
+
+# Trace embeds: forward-null/back-null aware statements
+from .trace_embed import (
+    TraceEmbed,
+    TraceEntry,
+    embed_trace,
+    safe_execute_statement,
+    statement_with_trace,
+)
