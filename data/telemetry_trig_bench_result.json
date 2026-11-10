@@ -1,0 +1,56 @@
+{
+  "benchmark": "trigonometry_telemetry",
+  "generated_at_ns": 1794335887907758600,
+  "dataset": {
+    "name": "telemetry_trig_dataset",
+    "count": 2000,
+    "fields": [
+      "idx",
+      "t_s",
+      "angle_deg",
+      "angle_rad",
+      "sensor_a",
+      "sensor_b",
+      "sensor_c"
+    ]
+  },
+  "workload": {
+    "samples": 2000,
+    "ops": 6000,
+    "ops_per_sample": 3,
+    "functions": [
+      "sin",
+      "cos",
+      "tan"
+    ]
+  },
+  "timing": {
+    "total_ns": 94096500,
+    "total_s": 0.0940965,
+    "ns_per_sample": 47048.25,
+    "ns_per_op": 15682.75,
+    "samples_per_s": 21254.775682411142,
+    "ops_per_s": 63764.327047233426
+  },
+  "accuracy_vs_sensors": {
+    "sensor_a_sin_scaled_err": {
+      "count": 2000,
+      "mean": 0.3983456699899863,
+      "max": 1.8760293715326668,
+      "min": 1.4445490762682311e-05
+    },
+    "sensor_b_cos_scaled_err": {
+      "count": 2000,
+      "mean": 0.24094322703387155,
+      "max": 1.1811823778845394,
+      "min": 4.471495946845039e-05
+    },
+    "note": "Sensors include simulated Gaussian noise; error reflects noise + numeric delta."
+  },
+  "tan_magnitude": {
+    "count": 2000,
+    "mean": 6.229952042440981,
+    "max": 1145.9152993725693,
+    "min": 0.0
+  }
+}
