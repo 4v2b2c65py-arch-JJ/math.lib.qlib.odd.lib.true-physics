@@ -1,0 +1,302 @@
+{
+  "type": "portal_traversal_energy_dissipation_result",
+  "generated_at_ns": 1794330925477071700,
+  "constants": {
+    "c": 299792458.0,
+    "v_fraction_c": 0.2,
+    "gamma": 1.0206207261596576,
+    "sr_notes": [
+      "Einstein SR base plate: c constant, Lorentz transformations",
+      "non-negligible relativistic regime beta=0.200000"
+    ]
+  },
+  "base_aspen": "a7e8a1146c3d6dc152288540ab540443",
+  "events": [
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 1
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 12
+    },
+    {
+      "op": "div",
+      "a": 96,
+      "b": 8
+    },
+    {
+      "op": "mul",
+      "a": 12,
+      "b": 8
+    },
+    {
+      "op": "div",
+      "a": 8000,
+      "b": 1000
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 1000
+    }
+  ],
+  "steps": [
+    {
+      "index": 0,
+      "op": "mul",
+      "a": 8,
+      "b": 1,
+      "node_key": 2836842953646248107,
+      "row_hash": 2836842953646248107,
+      "aspen_key": "5142e0b04438cf0eb4cf587e1c73d700",
+      "percentage": 0.0,
+      "field_percentage": 0.30649823459122094,
+      "energy_in": 1.0,
+      "energy_transferred": 0.1851375707262226,
+      "energy_dissipated": 0.8148624292737774,
+      "energy_out": 0.1851375707262226,
+      "gamma": 1.0206207261596576,
+      "tick": 0.5
+    },
+    {
+      "index": 1,
+      "op": "mul",
+      "a": 8,
+      "b": 12,
+      "node_key": 4000947526240636917,
+      "row_hash": 4000947526240636917,
+      "aspen_key": "c4fcc1374c7152cc2cf6abbec8217357",
+      "percentage": 0.2,
+      "field_percentage": 0.27638260501253414,
+      "energy_in": 0.1851375707262226,
+      "energy_transferred": 0.04814335436955232,
+      "energy_dissipated": 0.1369942163566703,
+      "energy_out": 0.04814335436955232,
+      "gamma": 1.0206207261596576,
+      "tick": 0.7
+    },
+    {
+      "index": 2,
+      "op": "div",
+      "a": 96,
+      "b": 8,
+      "node_key": 8947284153791656557,
+      "row_hash": 8947284153791656557,
+      "aspen_key": "346f48e5d14255e28837e470158a583f",
+      "percentage": 0.4,
+      "field_percentage": 0.6184760517770974,
+      "energy_in": 0.04814335436955232,
+      "energy_transferred": 0.024026152615979745,
+      "energy_dissipated": 0.024117201753572574,
+      "energy_out": 0.024026152615979745,
+      "gamma": 1.0206207261596576,
+      "tick": 0.9
+    },
+    {
+      "index": 3,
+      "op": "mul",
+      "a": 12,
+      "b": 8,
+      "node_key": 10342135526115701233,
+      "row_hash": 10342135526115701233,
+      "aspen_key": "40f02f99644ac15dbdf9f4838ad6a99f",
+      "percentage": 0.6,
+      "field_percentage": 0.743340729017292,
+      "energy_in": 0.024026152615979745,
+      "energy_transferred": 0.015431754695531562,
+      "energy_dissipated": 0.008594397920448183,
+      "energy_out": 0.015431754695531562,
+      "gamma": 1.0206207261596576,
+      "tick": 1.1
+    },
+    {
+      "index": 4,
+      "op": "div",
+      "a": 8000,
+      "b": 1000,
+      "node_key": 5750336278033742137,
+      "row_hash": 5750336278033742137,
+      "aspen_key": "3f269b3f3d565838c141789dae57595d",
+      "percentage": 0.8,
+      "field_percentage": 0.7552144412282731,
+      "energy_in": 0.015431754695531562,
+      "energy_transferred": 0.011353245752666823,
+      "energy_dissipated": 0.004078508942864739,
+      "energy_out": 0.011353245752666823,
+      "gamma": 1.0206207261596576,
+      "tick": 1.3
+    },
+    {
+      "index": 5,
+      "op": "mul",
+      "a": 8,
+      "b": 1000,
+      "node_key": 11934013741639379207,
+      "row_hash": 11934013741639379207,
+      "aspen_key": "2afbe9668ffe52eb9a13d4d7200977ab",
+      "percentage": 1.0,
+      "field_percentage": 0.8303461257849608,
+      "energy_in": 0.011353245752666823,
+      "energy_transferred": 0.009729896583522414,
+      "energy_dissipated": 0.0016233491691444082,
+      "energy_out": 0.009729896583522414,
+      "gamma": 1.0206207261596576,
+      "tick": 1.5
+    }
+  ],
+  "buckets": {
+    "base_aspen": "a7e8a1146c3d6dc152288540ab540443",
+    "open_bucket_indices": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5
+    ],
+    "buckets": [
+      {
+        "index": 0,
+        "start_pct": 0.0,
+        "end_pct": 0.16666666666666666,
+        "tick_start": 0.5,
+        "tick_end": 0.6666666666666666,
+        "open": true,
+        "aspen_keys": [
+          "5142e0b04438cf0eb4cf587e1c73d700"
+        ],
+        "count": 1
+      },
+      {
+        "index": 1,
+        "start_pct": 0.16666666666666666,
+        "end_pct": 0.3333333333333333,
+        "tick_start": 0.6666666666666666,
+        "tick_end": 0.8333333333333333,
+        "open": true,
+        "aspen_keys": [
+          "c4fcc1374c7152cc2cf6abbec8217357"
+        ],
+        "count": 1
+      },
+      {
+        "index": 2,
+        "start_pct": 0.3333333333333333,
+        "end_pct": 0.5,
+        "tick_start": 0.8333333333333333,
+        "tick_end": 1.0,
+        "open": true,
+        "aspen_keys": [
+          "346f48e5d14255e28837e470158a583f"
+        ],
+        "count": 1
+      },
+      {
+        "index": 3,
+        "start_pct": 0.5,
+        "end_pct": 0.6666666666666666,
+        "tick_start": 1.0,
+        "tick_end": 1.1666666666666665,
+        "open": true,
+        "aspen_keys": [
+          "40f02f99644ac15dbdf9f4838ad6a99f"
+        ],
+        "count": 1
+      },
+      {
+        "index": 4,
+        "start_pct": 0.6666666666666666,
+        "end_pct": 0.8333333333333334,
+        "tick_start": 1.1666666666666665,
+        "tick_end": 1.3333333333333335,
+        "open": true,
+        "aspen_keys": [
+          "3f269b3f3d565838c141789dae57595d"
+        ],
+        "count": 1
+      },
+      {
+        "index": 5,
+        "start_pct": 0.8333333333333334,
+        "end_pct": 1.0,
+        "tick_start": 1.3333333333333335,
+        "tick_end": 1.5,
+        "open": true,
+        "aspen_keys": [
+          "2afbe9668ffe52eb9a13d4d7200977ab"
+        ],
+        "count": 1
+      }
+    ]
+  },
+  "domain_structure": {
+    "domains": {
+      "portal": [
+        {
+          "aspen_key": "5142e0b04438cf0eb4cf587e1c73d700",
+          "weight": 0.30649823459122094,
+          "meta": {
+            "index": 0,
+            "action": "traverse"
+          }
+        },
+        {
+          "aspen_key": "c4fcc1374c7152cc2cf6abbec8217357",
+          "weight": 0.27638260501253414,
+          "meta": {
+            "index": 1,
+            "action": "traverse"
+          }
+        },
+        {
+          "aspen_key": "346f48e5d14255e28837e470158a583f",
+          "weight": 0.6184760517770974,
+          "meta": {
+            "index": 2,
+            "action": "traverse"
+          }
+        },
+        {
+          "aspen_key": "40f02f99644ac15dbdf9f4838ad6a99f",
+          "weight": 0.743340729017292,
+          "meta": {
+            "index": 3,
+            "action": "traverse"
+          }
+        },
+        {
+          "aspen_key": "3f269b3f3d565838c141789dae57595d",
+          "weight": 0.7552144412282731,
+          "meta": {
+            "index": 4,
+            "action": "traverse"
+          }
+        },
+        {
+          "aspen_key": "2afbe9668ffe52eb9a13d4d7200977ab",
+          "weight": 0.8303461257849608,
+          "meta": {
+            "index": 5,
+            "action": "traverse"
+          }
+        }
+      ]
+    }
+  },
+  "energy_accounting": {
+    "E_in_total": 1.0,
+    "E_transferred_coherent_total": 0.29382197474347543,
+    "E_dissipated_total": 0.9902701034164776,
+    "E_out_final": 0.009729896583522414,
+    "conservation_check": true,
+    "balance_error": 0.0
+  },
+  "statement": {
+    "portal_traversal": "Portal traversal is modeled as hash-addressed transition across math-tree nodes (tree_key_hash per CalcEvent) with aspen-keyed, percentage/field-status selection per loop. Each step carries state via row/cell hashes and domain authority; traversal is deterministic and auditable across the bucket/tick span.",
+    "energy_dissipation": "Energy is fully accounted at every step: E_in_step = E_transferred + E_dissipated, with coherent transfer governed by field percentage and relativistic gamma (Einstein SR base plate, c constant). Dissipation is the residual non-coherent component recorded per transition (hash-residual/entropy proxy), not lost from the ledger; total conservation holds (E_in_total = E_out_final + E_dissipated_total).",
+    "resolution": "Within this field/timeline structure, portal traversal and energy dissipation are resolved as conservation-consistent, hash-addressed state transitions: traversal paths are computable, dissipation is explicitly quantified per step, and all quantities are percentage-/tick-/hash-traceable."
+  }
+}

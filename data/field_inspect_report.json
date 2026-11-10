@@ -1,0 +1,191 @@
+{
+  "generated_at_ns": 1794329878397071700,
+  "atomic_dataset": "F:\\timeline\\data\\physics_codata_corrected.json",
+  "total_calculations": 4,
+  "total_outputs": 8,
+  "summary": {
+    "targets_considered": 11,
+    "aligned_constants": {
+      "standard acceleration of gravity": {
+        "count": 8,
+        "unit": "m s^-2",
+        "value": 9.80665,
+        "avg_abs_log10_residual": 0.911395454499262
+      }
+    },
+    "categories": {
+      "mul:conjecture:agent0:z0": 4,
+      "mul:result:agent1:z0": 4
+    }
+  },
+  "alignments": [
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 12,
+      "row_base_hash": 4000947526240636917,
+      "cell_index": 0,
+      "agent_id": 0,
+      "category": "mul:conjecture:agent0:z0",
+      "value": 96.0,
+      "stored_hash": 17247893995073189518,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 9.78927564458811,
+      "residual": 0.9907505574622997,
+      "qbit": {
+        "alpha": 0.7393264459201432,
+        "beta": 0.6733471662991459,
+        "phase": 1.7453292519943295
+      }
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 12,
+      "row_base_hash": 4000947526240636917,
+      "cell_index": 1,
+      "agent_id": 1,
+      "category": "mul:result:agent1:z0",
+      "value": 96.0,
+      "stored_hash": 13729680855315349089,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 9.78927564458811,
+      "residual": 0.9907505574622997,
+      "qbit": {
+        "alpha": 0.8398118969101583,
+        "beta": 0.5428774979755209,
+        "phase": 4.014257279586958
+      }
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 8,
+      "row_base_hash": 14524619195489693698,
+      "cell_index": 0,
+      "agent_id": 0,
+      "category": "mul:conjecture:agent0:z0",
+      "value": 64.0,
+      "stored_hash": 7805052760148975785,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 6.526183763058741,
+      "residual": 0.8146592984066183,
+      "qbit": {
+        "alpha": 0.947574672463522,
+        "beta": 0.3195344114577473,
+        "phase": 5.183627878423159
+      }
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 8,
+      "row_base_hash": 14524619195489693698,
+      "cell_index": 1,
+      "agent_id": 1,
+      "category": "mul:result:agent1:z0",
+      "value": 64.0,
+      "stored_hash": 1261065584917161647,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 6.526183763058741,
+      "residual": 0.8146592984066183,
+      "qbit": {
+        "alpha": 0.9088489061634482,
+        "beta": 0.41712547964072366,
+        "phase": 2.6354471705114375
+      }
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 13,
+      "row_base_hash": 4820286325244791296,
+      "cell_index": 0,
+      "agent_id": 0,
+      "category": "mul:conjecture:agent0:z0",
+      "value": 104.0,
+      "stored_hash": 3903006990352085825,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 10.605048614970455,
+      "residual": 1.0255126637215115,
+      "qbit": {
+        "alpha": 0.8655799625686796,
+        "beta": 0.5007707343681369,
+        "phase": 4.694935687864747
+      }
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 13,
+      "row_base_hash": 4820286325244791296,
+      "cell_index": 1,
+      "agent_id": 1,
+      "category": "mul:result:agent1:z0",
+      "value": 104.0,
+      "stored_hash": 8575784114919380981,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 10.605048614970455,
+      "residual": 1.0255126637215115,
+      "qbit": {
+        "alpha": 0.5597411400313526,
+        "beta": 0.8286675184634679,
+        "phase": 4.4505895925855405
+      }
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 8,
+      "row_base_hash": 14524619195489693698,
+      "cell_index": 0,
+      "agent_id": 0,
+      "category": "mul:conjecture:agent0:z0",
+      "value": 64.0,
+      "stored_hash": 7805052760148975785,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 6.526183763058741,
+      "residual": 0.8146592984066183,
+      "qbit": {
+        "alpha": 0.947574672463522,
+        "beta": 0.3195344114577473,
+        "phase": 5.183627878423159
+      }
+    },
+    {
+      "op": "mul",
+      "a": 8,
+      "b": 8,
+      "row_base_hash": 14524619195489693698,
+      "cell_index": 1,
+      "agent_id": 1,
+      "category": "mul:result:agent1:z0",
+      "value": 64.0,
+      "stored_hash": 1261065584917161647,
+      "aligned_constant": "standard acceleration of gravity",
+      "aligned_constant_value": 9.80665,
+      "aligned_unit": "m s^-2",
+      "scale_ratio": 6.526183763058741,
+      "residual": 0.8146592984066183,
+      "qbit": {
+        "alpha": 0.9088489061634482,
+        "beta": 0.41712547964072366,
+        "phase": 2.6354471705114375
+      }
+    }
+  ]
+}

@@ -1,0 +1,14 @@
+[package]
+name = "mathlib"
+version = "0.1.0"
+edition = "2024"
+
+[lib]
+name = "mathlib"
+path = "src/lib.rs"
+
+[[bin]]
+name = "mathlib_bench"
+path = "src/bin/bench.rs"
+
+[dependencies]

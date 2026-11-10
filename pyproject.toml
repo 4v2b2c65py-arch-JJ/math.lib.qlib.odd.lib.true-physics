@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "mathlib-py"
+version = "0.1.0"
+description = "Timeline mathlib: times-plank, agent sorting, GGUF benchmark timeline checks, ASCII video, MCP smart calculator"
+readme = "README.md"
+requires-python = ">=3.9"
+dependencies = []
+
+[project.optional-dependencies]
+mcp = ["mcp"]
+
+[project.scripts]
+mathlib-py = "mathlib_py.__main__:main"
+
+[tool.setuptools.packages.find]
+where = ["python"]
+include = ["mathlib_py*"]

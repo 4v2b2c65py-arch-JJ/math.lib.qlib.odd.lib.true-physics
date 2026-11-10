@@ -1,0 +1,297 @@
+{
+  "generated_at_ns": 1794326960039571400,
+  "scipy_version": "1.14.1",
+  "source": "scipy.constants (CODATA 2022 recommended values as provided by installed SciPy)",
+  "install_note": "scipy already installed; CODATA dataset accessed via scipy.constants.physical_constants",
+  "records": {
+    "speed of light in vacuum": {
+      "key": "speed of light in vacuum",
+      "value": 299792458.0,
+      "unit": "m s^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "Planck constant": {
+      "key": "Planck constant",
+      "value": 6.62607015e-34,
+      "unit": "J Hz^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "reduced Planck constant": {
+      "key": "reduced Planck constant",
+      "value": 1.0545718176461565e-34,
+      "unit": "J s",
+      "uncertainty": 0.0,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": true,
+      "note": "corrected from h/(2*pi)"
+    },
+    "elementary charge": {
+      "key": "elementary charge",
+      "value": 1.602176634e-19,
+      "unit": "C",
+      "uncertainty": 0.0,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "electron mass": {
+      "key": "electron mass",
+      "value": 9.1093837015e-31,
+      "unit": "kg",
+      "uncertainty": 2.8e-40,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "proton mass": {
+      "key": "proton mass",
+      "value": 1.67262192369e-27,
+      "unit": "kg",
+      "uncertainty": 5.1e-37,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "neutron mass": {
+      "key": "neutron mass",
+      "value": 1.67492749804e-27,
+      "unit": "kg",
+      "uncertainty": 9.5e-37,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "Boltzmann constant": {
+      "key": "Boltzmann constant",
+      "value": 1.380649e-23,
+      "unit": "J K^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "Avogadro constant": {
+      "key": "Avogadro constant",
+      "value": 6.02214076e+23,
+      "unit": "mol^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "Newtonian constant of gravitation": {
+      "key": "Newtonian constant of gravitation",
+      "value": 6.6743e-11,
+      "unit": "m^3 kg^-1 s^-2",
+      "uncertainty": 1.5e-15,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "vacuum electric permittivity": {
+      "key": "vacuum electric permittivity",
+      "value": 8.8541878128e-12,
+      "unit": "F m^-1",
+      "uncertainty": 1.3e-21,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "vacuum mag. permeability": {
+      "key": "vacuum mag. permeability",
+      "value": 1.25663706212e-06,
+      "unit": "N A^-2",
+      "uncertainty": 1.9e-16,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "fine-structure constant": {
+      "key": "fine-structure constant",
+      "value": 0.0072973525693,
+      "unit": "",
+      "uncertainty": 1.1e-12,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "Rydberg constant": {
+      "key": "Rydberg constant",
+      "value": 10973731.56816,
+      "unit": "m^-1",
+      "uncertainty": 2.1e-05,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "atomic mass constant": {
+      "key": "atomic mass constant",
+      "value": 1.6605390666e-27,
+      "unit": "kg",
+      "uncertainty": 5e-37,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "standard acceleration of gravity": {
+      "key": "standard acceleration of gravity",
+      "value": 9.80665,
+      "unit": "m s^-2",
+      "uncertainty": 0.0,
+      "source": "scipy.constants/CODATA2022 (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "c_attr": {
+      "key": "c_attr",
+      "value": 299792458.0,
+      "unit": "m s^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "h_attr": {
+      "key": "h_attr",
+      "value": 6.62607015e-34,
+      "unit": "J s",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "hbar_attr": {
+      "key": "hbar_attr",
+      "value": 1.0545718176461565e-34,
+      "unit": "J s",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "e_attr": {
+      "key": "e_attr",
+      "value": 1.602176634e-19,
+      "unit": "C",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "k_attr": {
+      "key": "k_attr",
+      "value": 1.380649e-23,
+      "unit": "J K^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "N_A_attr": {
+      "key": "N_A_attr",
+      "value": 6.02214076e+23,
+      "unit": "mol^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "G_attr": {
+      "key": "G_attr",
+      "value": 6.6743e-11,
+      "unit": "m^3 kg^-1 s^-2",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "epsilon_0_attr": {
+      "key": "epsilon_0_attr",
+      "value": 8.8541878128e-12,
+      "unit": "F m^-1",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "mu_0_attr": {
+      "key": "mu_0_attr",
+      "value": 1.25663706212e-06,
+      "unit": "N A^-2",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "alpha_attr": {
+      "key": "alpha_attr",
+      "value": 0.0072973525693,
+      "unit": "",
+      "uncertainty": 0.0,
+      "source": "scipy.constants attribute (scipy 1.14.1)",
+      "corrected": false,
+      "note": ""
+    },
+    "derived.h_eV_s": {
+      "key": "derived.h_eV_s",
+      "value": 4.135667696923859e-15,
+      "unit": "eV s",
+      "uncertainty": 0.0,
+      "source": "derived/corrected from scipy CODATA",
+      "corrected": true,
+      "note": "Planck constant in eV*s"
+    },
+    "derived.hbar_eV_s": {
+      "key": "derived.hbar_eV_s",
+      "value": 6.582119569509067e-16,
+      "unit": "eV s",
+      "uncertainty": 0.0,
+      "source": "derived/corrected from scipy CODATA",
+      "corrected": true,
+      "note": "reduced Planck constant in eV*s"
+    },
+    "derived.hc_eV_m": {
+      "key": "derived.hc_eV_m",
+      "value": 1.2398419843320026e-06,
+      "unit": "eV m",
+      "uncertainty": 0.0,
+      "source": "derived/corrected from scipy CODATA",
+      "corrected": true,
+      "note": "hc in eV*m"
+    }
+  },
+  "corrections_report": [
+    {
+      "check": "hbar_vs_h_over_2pi",
+      "ok": false,
+      "expected": 1.0545718176461565e-34,
+      "actual": 1.054571817e-34,
+      "rel_err": 6.127192731671329e-10
+    },
+    {
+      "check": "c_vs_1_sqrt_mu0_eps0",
+      "ok": true,
+      "expected": 299792458.0000065,
+      "actual": 299792458.0,
+      "rel_err": 2.1671346650480375e-14
+    },
+    {
+      "check": "alpha_vs_derived",
+      "ok": true,
+      "expected": 0.007297352569278033,
+      "actual": 0.0072973525693,
+      "rel_err": 3.0103617071279247e-12
+    },
+    {
+      "check": "dataset_normalized",
+      "ok": true,
+      "records": 29
+    }
+  ]
+}

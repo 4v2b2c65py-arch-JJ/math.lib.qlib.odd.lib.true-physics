@@ -1,0 +1,31 @@
+{
+  "generated_at_ns": 1794326960039571400,
+  "report": [
+    {
+      "check": "hbar_vs_h_over_2pi",
+      "ok": false,
+      "expected": 1.0545718176461565e-34,
+      "actual": 1.054571817e-34,
+      "rel_err": 6.127192731671329e-10
+    },
+    {
+      "check": "c_vs_1_sqrt_mu0_eps0",
+      "ok": true,
+      "expected": 299792458.0000065,
+      "actual": 299792458.0,
+      "rel_err": 2.1671346650480375e-14
+    },
+    {
+      "check": "alpha_vs_derived",
+      "ok": true,
+      "expected": 0.007297352569278033,
+      "actual": 0.0072973525693,
+      "rel_err": 3.0103617071279247e-12
+    },
+    {
+      "check": "dataset_normalized",
+      "ok": true,
+      "records": 29
+    }
+  ]
+}

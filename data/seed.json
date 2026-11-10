@@ -1,0 +1,705 @@
+{
+  "seed_type": "phrase+script",
+  "phrase": "timeline gravity context: aapl fall from git tree run (unborn master), hash-addressed times-plank seed",
+  "phrase_hash": "aeaccc1016443cef0243290902773b55",
+  "aspen_key": "07533e2ef2127226ec1437ee29fe2f8f",
+  "base_value": 8,
+  "series_xs": [
+    1,
+    159,
+    156,
+    244,
+    10,
+    218,
+    214,
+    199,
+    247,
+    346,
+    369,
+    468
+  ],
+  "generated_at_ns": 1794330751444914300,
+  "script": {
+    "mul_rows": 12,
+    "div_rows": 8,
+    "outputs_total": 24,
+    "categories": {
+      "mul:conjecture:agent0:z0": 12,
+      "mul:result:agent1:z0": 12
+    },
+    "tree_nodes": 10,
+    "event_log_tail": [
+      "insert key=16825395947338045691 8x10 hash=16825395947338045691 aspen=363a4dfe3e11e4ff4aab01dd468f690d",
+      "insert key=10611167991843891411 8x218 hash=10611167991843891411 aspen=437d464d8ee2fd10301f119d495cb131",
+      "insert key=7426635436696506856 8/1 hash=7426635436696506856 aspen=f63b0bc6e8c005352a4af21144fb906c",
+      "insert key=14814885253615450103 8/159 hash=14814885253615450103 aspen=bf098cffdf06f07417ffae2630dd55ac",
+      "insert key=10872167252931281068 8/156 hash=10872167252931281068 aspen=975d1a4bca59f0d0e80bc9a686370840",
+      "insert key=15472665483050918821 8/244 hash=15472665483050918821 aspen=1fe4d7d114d6beb9a3c55e23ae3d931c"
+    ],
+    "aspen_by_percentage": [
+      {
+        "percentage": 0.0,
+        "status": {
+          "action": "insert",
+          "index": 0,
+          "total": 10,
+          "percentage": 0.0,
+          "percentage_100": 0.0,
+          "op": "mul",
+          "a": 8,
+          "b": 1,
+          "row_hash": 2836842953646248107
+        },
+        "aspen_key": "db00160f803887e2aeb9b91685cfa9fb"
+      },
+      {
+        "percentage": 11.111111,
+        "status": {
+          "action": "insert",
+          "index": 1,
+          "total": 10,
+          "percentage": 0.1111111111111111,
+          "percentage_100": 11.111111,
+          "op": "mul",
+          "a": 8,
+          "b": 159,
+          "row_hash": 14235542179070807143
+        },
+        "aspen_key": "b2ac19bd002da55d8a170e25ecfa1b36"
+      },
+      {
+        "percentage": 22.222222,
+        "status": {
+          "action": "insert",
+          "index": 2,
+          "total": 10,
+          "percentage": 0.2222222222222222,
+          "percentage_100": 22.222222,
+          "op": "mul",
+          "a": 8,
+          "b": 156,
+          "row_hash": 11032169273243045608
+        },
+        "aspen_key": "87cf66a4e993919dfc23c934f2c526b6"
+      },
+      {
+        "percentage": 33.333333,
+        "status": {
+          "action": "insert",
+          "index": 3,
+          "total": 10,
+          "percentage": 0.3333333333333333,
+          "percentage_100": 33.333333,
+          "op": "mul",
+          "a": 8,
+          "b": 244,
+          "row_hash": 14748226983053638634
+        },
+        "aspen_key": "7d59516c4b9cab8352936c311c700538"
+      },
+      {
+        "percentage": 44.444444,
+        "status": {
+          "action": "insert",
+          "index": 4,
+          "total": 10,
+          "percentage": 0.4444444444444444,
+          "percentage_100": 44.444444,
+          "op": "mul",
+          "a": 8,
+          "b": 10,
+          "row_hash": 16825395947338045691
+        },
+        "aspen_key": "363a4dfe3e11e4ff4aab01dd468f690d"
+      },
+      {
+        "percentage": 55.555556,
+        "status": {
+          "action": "insert",
+          "index": 5,
+          "total": 10,
+          "percentage": 0.5555555555555556,
+          "percentage_100": 55.555556,
+          "op": "mul",
+          "a": 8,
+          "b": 218,
+          "row_hash": 10611167991843891411
+        },
+        "aspen_key": "437d464d8ee2fd10301f119d495cb131"
+      },
+      {
+        "percentage": 66.666667,
+        "status": {
+          "action": "insert",
+          "index": 6,
+          "total": 10,
+          "percentage": 0.6666666666666666,
+          "percentage_100": 66.666667,
+          "op": "div",
+          "a": 8,
+          "b": 1,
+          "row_hash": 7426635436696506856
+        },
+        "aspen_key": "f63b0bc6e8c005352a4af21144fb906c"
+      },
+      {
+        "percentage": 77.777778,
+        "status": {
+          "action": "insert",
+          "index": 7,
+          "total": 10,
+          "percentage": 0.7777777777777778,
+          "percentage_100": 77.777778,
+          "op": "div",
+          "a": 8,
+          "b": 159,
+          "row_hash": 14814885253615450103
+        },
+        "aspen_key": "bf098cffdf06f07417ffae2630dd55ac"
+      },
+      {
+        "percentage": 88.888889,
+        "status": {
+          "action": "insert",
+          "index": 8,
+          "total": 10,
+          "percentage": 0.8888888888888888,
+          "percentage_100": 88.888889,
+          "op": "div",
+          "a": 8,
+          "b": 156,
+          "row_hash": 10872167252931281068
+        },
+        "aspen_key": "975d1a4bca59f0d0e80bc9a686370840"
+      },
+      {
+        "percentage": 100.0,
+        "status": {
+          "action": "insert",
+          "index": 9,
+          "total": 10,
+          "percentage": 1.0,
+          "percentage_100": 100.0,
+          "op": "div",
+          "a": 8,
+          "b": 244,
+          "row_hash": 15472665483050918821
+        },
+        "aspen_key": "1fe4d7d114d6beb9a3c55e23ae3d931c"
+      }
+    ],
+    "aspen_domain_recalls": [
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 0,
+          "total": 10,
+          "percentage": 0.0,
+          "percentage_100": 0.0,
+          "op": "mul",
+          "a": 8,
+          "b": 1
+        },
+        "percentage": 0.0,
+        "percentage_100": 0.0,
+        "field_percentage": 0.24800730020070297,
+        "field_percentage_100": 24.80073,
+        "aspen_key": "47a8356f6ab0c32ec67ffaa5b570c1dd",
+        "authority": {
+          "aspen_key": "47a8356f6ab0c32ec67ffaa5b570c1dd",
+          "weight": 0.24800730020070297
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 1,
+          "total": 10,
+          "percentage": 0.1111111111111111,
+          "percentage_100": 11.111111,
+          "op": "mul",
+          "a": 8,
+          "b": 159
+        },
+        "percentage": 0.1111111111111111,
+        "percentage_100": 11.111111,
+        "field_percentage": 0.17253894366194905,
+        "field_percentage_100": 17.253894,
+        "aspen_key": "5187b7fba31c75fde6929e4e2dd8a3a7",
+        "authority": {
+          "aspen_key": "5187b7fba31c75fde6929e4e2dd8a3a7",
+          "weight": 0.17253894366194905
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 2,
+          "total": 10,
+          "percentage": 0.2222222222222222,
+          "percentage_100": 22.222222,
+          "op": "mul",
+          "a": 8,
+          "b": 156
+        },
+        "percentage": 0.2222222222222222,
+        "percentage_100": 22.222222,
+        "field_percentage": 0.21471512526512476,
+        "field_percentage_100": 21.471513,
+        "aspen_key": "bb20d28f58863a0984ecaf952bf7c91e",
+        "authority": {
+          "aspen_key": "bb20d28f58863a0984ecaf952bf7c91e",
+          "weight": 0.21471512526512476
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 3,
+          "total": 10,
+          "percentage": 0.3333333333333333,
+          "percentage_100": 33.333333,
+          "op": "mul",
+          "a": 8,
+          "b": 244
+        },
+        "percentage": 0.3333333333333333,
+        "percentage_100": 33.333333,
+        "field_percentage": 0.4433613439690723,
+        "field_percentage_100": 44.336134,
+        "aspen_key": "3851f2370eb9836bed6e853a9fba82d3",
+        "authority": {
+          "aspen_key": "3851f2370eb9836bed6e853a9fba82d3",
+          "weight": 0.4433613439690723
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 4,
+          "total": 10,
+          "percentage": 0.4444444444444444,
+          "percentage_100": 44.444444,
+          "op": "mul",
+          "a": 8,
+          "b": 10
+        },
+        "percentage": 0.4444444444444444,
+        "percentage_100": 44.444444,
+        "field_percentage": 0.2856974006133574,
+        "field_percentage_100": 28.56974,
+        "aspen_key": "d6c8a5477a9e77bc1eec28a7fa11a89c",
+        "authority": {
+          "aspen_key": "d6c8a5477a9e77bc1eec28a7fa11a89c",
+          "weight": 0.2856974006133574
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 5,
+          "total": 10,
+          "percentage": 0.5555555555555556,
+          "percentage_100": 55.555556,
+          "op": "mul",
+          "a": 8,
+          "b": 218
+        },
+        "percentage": 0.5555555555555556,
+        "percentage_100": 55.555556,
+        "field_percentage": 0.6358391923519605,
+        "field_percentage_100": 63.583919,
+        "aspen_key": "428a264fe75b9814656ac040bbcff15f",
+        "authority": {
+          "aspen_key": "428a264fe75b9814656ac040bbcff15f",
+          "weight": 0.6358391923519605
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 6,
+          "total": 10,
+          "percentage": 0.6666666666666666,
+          "percentage_100": 66.666667,
+          "op": "div",
+          "a": 8,
+          "b": 1
+        },
+        "percentage": 0.6666666666666666,
+        "percentage_100": 66.666667,
+        "field_percentage": 0.6468447422045549,
+        "field_percentage_100": 64.684474,
+        "aspen_key": "6b747e6596495f4b98d5448700f9844d",
+        "authority": {
+          "aspen_key": "6b747e6596495f4b98d5448700f9844d",
+          "weight": 0.6468447422045549
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 7,
+          "total": 10,
+          "percentage": 0.7777777777777778,
+          "percentage_100": 77.777778,
+          "op": "div",
+          "a": 8,
+          "b": 159
+        },
+        "percentage": 0.7777777777777778,
+        "percentage_100": 77.777778,
+        "field_percentage": 0.5068064664124646,
+        "field_percentage_100": 50.680647,
+        "aspen_key": "b762149daeb1c2674bd73f58ef841671",
+        "authority": {
+          "aspen_key": "b762149daeb1c2674bd73f58ef841671",
+          "weight": 0.5068064664124646
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 8,
+          "total": 10,
+          "percentage": 0.8888888888888888,
+          "percentage_100": 88.888889,
+          "op": "div",
+          "a": 8,
+          "b": 156
+        },
+        "percentage": 0.8888888888888888,
+        "percentage_100": 88.888889,
+        "field_percentage": 0.7200735967712026,
+        "field_percentage_100": 72.00736,
+        "aspen_key": "9381332fadd6466ee7689b6bfec85220",
+        "authority": {
+          "aspen_key": "9381332fadd6466ee7689b6bfec85220",
+          "weight": 0.7200735967712026
+        }
+      },
+      {
+        "domain": "calculus",
+        "calculus_status": {
+          "action": "loop",
+          "index": 9,
+          "total": 10,
+          "percentage": 1.0,
+          "percentage_100": 100.0,
+          "op": "div",
+          "a": 8,
+          "b": 244
+        },
+        "percentage": 1.0,
+        "percentage_100": 100.0,
+        "field_percentage": 0.780267288855231,
+        "field_percentage_100": 78.026729,
+        "aspen_key": "2fbb0fa0b6b97d23d1880a0b70d0b6ec",
+        "authority": {
+          "aspen_key": "2fbb0fa0b6b97d23d1880a0b70d0b6ec",
+          "weight": 0.780267288855231
+        }
+      }
+    ],
+    "bucket_list_span_ticks": {
+      "base_aspen": "07533e2ef2127226ec1437ee29fe2f8f",
+      "open_bucket_indices": [
+        0,
+        1,
+        2,
+        3,
+        4,
+        5,
+        6,
+        7,
+        8,
+        9
+      ],
+      "buckets": [
+        {
+          "index": 0,
+          "start_pct": 0.0,
+          "end_pct": 0.1,
+          "tick_start": 0.0,
+          "tick_end": 0.1,
+          "open": true,
+          "aspen_keys": [
+            "47a8356f6ab0c32ec67ffaa5b570c1dd"
+          ],
+          "count": 1
+        },
+        {
+          "index": 1,
+          "start_pct": 0.1,
+          "end_pct": 0.2,
+          "tick_start": 0.1,
+          "tick_end": 0.2,
+          "open": true,
+          "aspen_keys": [
+            "5187b7fba31c75fde6929e4e2dd8a3a7"
+          ],
+          "count": 1
+        },
+        {
+          "index": 2,
+          "start_pct": 0.2,
+          "end_pct": 0.3,
+          "tick_start": 0.2,
+          "tick_end": 0.3,
+          "open": true,
+          "aspen_keys": [
+            "bb20d28f58863a0984ecaf952bf7c91e"
+          ],
+          "count": 1
+        },
+        {
+          "index": 3,
+          "start_pct": 0.3,
+          "end_pct": 0.4,
+          "tick_start": 0.3,
+          "tick_end": 0.4,
+          "open": true,
+          "aspen_keys": [
+            "3851f2370eb9836bed6e853a9fba82d3"
+          ],
+          "count": 1
+        },
+        {
+          "index": 4,
+          "start_pct": 0.4,
+          "end_pct": 0.5,
+          "tick_start": 0.4,
+          "tick_end": 0.5,
+          "open": true,
+          "aspen_keys": [
+            "d6c8a5477a9e77bc1eec28a7fa11a89c"
+          ],
+          "count": 1
+        },
+        {
+          "index": 5,
+          "start_pct": 0.5,
+          "end_pct": 0.6,
+          "tick_start": 0.5,
+          "tick_end": 0.6,
+          "open": true,
+          "aspen_keys": [
+            "428a264fe75b9814656ac040bbcff15f"
+          ],
+          "count": 1
+        },
+        {
+          "index": 6,
+          "start_pct": 0.6,
+          "end_pct": 0.7,
+          "tick_start": 0.6,
+          "tick_end": 0.7,
+          "open": true,
+          "aspen_keys": [
+            "6b747e6596495f4b98d5448700f9844d"
+          ],
+          "count": 1
+        },
+        {
+          "index": 7,
+          "start_pct": 0.7,
+          "end_pct": 0.8,
+          "tick_start": 0.7,
+          "tick_end": 0.8,
+          "open": true,
+          "aspen_keys": [
+            "b762149daeb1c2674bd73f58ef841671"
+          ],
+          "count": 1
+        },
+        {
+          "index": 8,
+          "start_pct": 0.8,
+          "end_pct": 0.9,
+          "tick_start": 0.8,
+          "tick_end": 0.9,
+          "open": true,
+          "aspen_keys": [
+            "9381332fadd6466ee7689b6bfec85220"
+          ],
+          "count": 1
+        },
+        {
+          "index": 9,
+          "start_pct": 0.9,
+          "end_pct": 1.0,
+          "tick_start": 0.9,
+          "tick_end": 1.0,
+          "open": true,
+          "aspen_keys": [
+            "2fbb0fa0b6b97d23d1880a0b70d0b6ec"
+          ],
+          "count": 1
+        }
+      ]
+    },
+    "trajectory_ticks": [
+      0.6366197723675814,
+      0.6366197723675814,
+      0.6366197723675814,
+      0.954929658551372,
+      0.954929658551372,
+      0.954929658551372,
+      1.2732395447351628,
+      1.2732395447351628,
+      1.2732395447351628,
+      1.5915494309189535
+    ],
+    "domain_structure": {
+      "domains": {
+        "calculus": [
+          {
+            "aspen_key": "47a8356f6ab0c32ec67ffaa5b570c1dd",
+            "weight": 0.24800730020070297,
+            "meta": {
+              "status_action": "loop",
+              "op": "mul"
+            }
+          },
+          {
+            "aspen_key": "5187b7fba31c75fde6929e4e2dd8a3a7",
+            "weight": 0.17253894366194905,
+            "meta": {
+              "status_action": "loop",
+              "op": "mul"
+            }
+          },
+          {
+            "aspen_key": "bb20d28f58863a0984ecaf952bf7c91e",
+            "weight": 0.21471512526512476,
+            "meta": {
+              "status_action": "loop",
+              "op": "mul"
+            }
+          },
+          {
+            "aspen_key": "3851f2370eb9836bed6e853a9fba82d3",
+            "weight": 0.4433613439690723,
+            "meta": {
+              "status_action": "loop",
+              "op": "mul"
+            }
+          },
+          {
+            "aspen_key": "d6c8a5477a9e77bc1eec28a7fa11a89c",
+            "weight": 0.2856974006133574,
+            "meta": {
+              "status_action": "loop",
+              "op": "mul"
+            }
+          },
+          {
+            "aspen_key": "428a264fe75b9814656ac040bbcff15f",
+            "weight": 0.6358391923519605,
+            "meta": {
+              "status_action": "loop",
+              "op": "mul"
+            }
+          },
+          {
+            "aspen_key": "6b747e6596495f4b98d5448700f9844d",
+            "weight": 0.6468447422045549,
+            "meta": {
+              "status_action": "loop",
+              "op": "div"
+            }
+          },
+          {
+            "aspen_key": "b762149daeb1c2674bd73f58ef841671",
+            "weight": 0.5068064664124646,
+            "meta": {
+              "status_action": "loop",
+              "op": "div"
+            }
+          },
+          {
+            "aspen_key": "9381332fadd6466ee7689b6bfec85220",
+            "weight": 0.7200735967712026,
+            "meta": {
+              "status_action": "loop",
+              "op": "div"
+            }
+          },
+          {
+            "aspen_key": "2fbb0fa0b6b97d23d1880a0b70d0b6ec",
+            "weight": 0.780267288855231,
+            "meta": {
+              "status_action": "loop",
+              "op": "div"
+            }
+          }
+        ]
+      }
+    },
+    "speculative_ranked": 24,
+    "hash_store": {
+      "base_num": 8,
+      "rows": 12,
+      "outputs": 24
+    }
+  },
+  "relativity_resonance": {
+    "base_c": 299792458.0,
+    "correction_sample": {
+      "original_key": 2836842953646248107,
+      "corrected_key": 2836842953970756746,
+      "correction": {
+        "beta": 0.5,
+        "gamma": 1.1547005383792517,
+        "time_dilation_factor": 1.1547005383792517,
+        "length_contraction_factor": 0.8660254037844385,
+        "relativistic_energy_factor": 1.1547005383792517,
+        "correction_applied": true,
+        "notes": [
+          "Einstein SR base plate: c constant, Lorentz transformations",
+          "non-negligible relativistic regime beta=0.500000"
+        ]
+      },
+      "original_row_hash": 2836842953646248107,
+      "corrected_row_hash": 7608477159680744593,
+      "original_values": [
+        8,
+        8
+      ],
+      "corrected_values": [
+        9,
+        9
+      ],
+      "event_log": [
+        "insert key=2836842953646248107 8x1 hash=2836842953646248107",
+        "rel_correct key=2836842953646248107 -> corrected_key=2836842953970756746 gamma=1.154700538379"
+      ]
+    }
+  },
+  "css_rule_c": {
+    "tick": 1.0,
+    "memory_allocation_equal_to_input": true,
+    "input_len": 12,
+    "output_len": 12,
+    "sample_ticked": [
+      0.954929658551372,
+      159.15494309189535,
+      155.97184423005743,
+      244.14368270296745,
+      9.867606471697512,
+      218.04227203589662,
+      213.90424351550735,
+      198.94367886486918
+    ]
+  },
+  "note": "Seed is a phrase (semantic/context) and a script (deterministic hash/math materialization)."
+}
