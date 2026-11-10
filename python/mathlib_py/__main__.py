@@ -29,6 +29,43 @@ def main(argv=None):
         from .custom_runtime import _cli as runtime_cli
         return runtime_cli(argv[1:])
 
+    # Neuron fit + qbit/log-sample compression: python -m mathlib_py neuron-fit
+    if argv and argv[0] in ("neuron-fit", "neuron", "qbit-fit", "qbit-compress"):
+        from .neuron_fit import fit_and_compress_net, compress_qbits
+        from . import MathOp, build_row_op
+        op = MathOp.MUL
+        base_v = 8
+        xs = [1, 2, 3, 4, 5, 8, 13]
+        i = 1
+        while i < len(argv):
+            if argv[i] == "--op" and i + 1 < len(argv):
+                op = MathOp.DIV if argv[i + 1].lower() in ("div", "/", "division") else MathOp.MUL
+                i += 2
+            elif argv[i] == "--base" and i + 1 < len(argv):
+                base_v = int(argv[i + 1]); i += 2
+            elif argv[i] == "--xs" and i + 1 < len(argv):
+                xs = [int(x) for x in argv[i + 1].split(",") if x.strip()]; i += 2
+            else:
+                i += 1
+        qbits = []
+        targets = []
+        values = []
+        for x in xs:
+            row = build_row_op(op, base_v, x)
+            for cell in row.cells:
+                if getattr(cell, "qbit", None) is not None:
+                    qbits.append(cell.qbit)
+                    targets.append(float(cell.value))
+                    values.append(float(cell.value))
+        if not qbits:
+            print(json.dumps({"ok": False, "error": "no qbits produced"}))
+            return 1
+        res = fit_and_compress_net(qbits, targets, values=values, base=10.0, epochs=10, mantissa_bits=8)
+        res["input"] = {"op": op.value, "base": base_v, "xs": xs, "qbit_count": len(qbits)}
+        res["qbit_compression_preview"] = compress_qbits(qbits[:3], values[:3], base=10.0)
+        print(json.dumps(res, indent=2, default=str))
+        return 0
+
     # ASCII video mode: python -m mathlib_py ascii --op mul --base 8 --xs 1,2,4,8,100,1000
     if argv and argv[0] in ("ascii", "video", "ascii-video"):
         from .ascii_vid import generate_ascii_video_from_series, play_ascii_video

@@ -1,0 +1,55 @@
+{
+  "compute_gauge": {
+    "baseline_ops_per_sec": 28398.573985891995,
+    "ops_per_sec": 28398.573985891995,
+    "throughput_percentage": 100.0,
+    "above_30": true,
+    "samples": 8,
+    "ops": 560,
+    "elapsed_ns": 19719300,
+    "updates": 1
+  },
+  "self_improving_notes": {
+    "current": {
+      "level": 0,
+      "timestamp_ns": 1794341924756291200,
+      "throughput_percentage": 100.0,
+      "above_30": true,
+      "net_gain": {
+        "compression_ratio": 2.8,
+        "gain_ratio": 1.7999999999999998,
+        "improved": true
+      },
+      "foreseeable_result": true,
+      "goal": "foreseeable result that future holds",
+      "summary": "Compute gauge 100.00% (above 30). Net gain positive; goal 'foreseeable result that future holds' is foreseeable."
+    },
+    "notes": [
+      {
+        "level": 0,
+        "timestamp_ns": 1794341924756291200,
+        "throughput_percentage": 100.0,
+        "above_30": true,
+        "net_gain": {
+          "compression_ratio": 2.8,
+          "gain_ratio": 1.7999999999999998,
+          "improved": true
+        },
+        "foreseeable_result": true,
+        "goal": "foreseeable result that future holds",
+        "summary": "Compute gauge 100.00% (above 30). Net gain positive; goal 'foreseeable result that future holds' is foreseeable."
+      }
+    ],
+    "count": 1,
+    "recursively_improved": false,
+    "foreseeable_result": true,
+    "above_30": true
+  },
+  "net_gain": {
+    "compression_ratio": 2.8,
+    "gain_ratio": 1.7999999999999998,
+    "improved": true
+  },
+  "last_input_count": 8,
+  "goal": "foreseeable result that future holds"
+}

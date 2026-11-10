@@ -89,6 +89,40 @@ def compress_arith_value(value: int) -> Dict[str, Any]:
     }
 
 
+def simplify_log(x: float, base: float = 10.0) -> Dict[str, Any]:
+    """Simplify log_base(x) using magnitude decomposition (log shortcut)."""
+    if _math is None:
+        raise RuntimeError("math module unavailable")
+    xf = float(x)
+    if xf <= 0:
+        raise ValueError("log undefined for non-positive x")
+    if base <= 0 or base == 1:
+        raise ValueError("log base must be > 0 and != 1")
+    if base == 10.0:
+        exp10 = int(_math.floor(_math.log10(xf)))
+        mant = xf / (10.0 ** exp10)
+        value = exp10 + _math.log10(mant)
+        expr = f"log10({xf}) = {exp10} + log10({mant})"
+        return {"x": xf, "base": base, "value": value, "exp10": exp10, "mantissa": mant, "expr": expr}
+    ln_x = _math.log(xf)
+    ln_b = _math.log(base)
+    value = ln_x / ln_b
+    # decompose x = mantissa * 10^exp10 for a compact form
+    exp10 = int(_math.floor(_math.log10(xf)))
+    mant = xf / (10.0 ** exp10)
+    expr = f"log_{base}({xf}) = ln({xf})/ln({base}) = {exp10}*log_{base}(10) + log_{base}({mant})"
+    return {
+        "x": xf,
+        "base": base,
+        "value": value,
+        "exp10": exp10,
+        "mantissa": mant,
+        "ln_x": ln_x,
+        "ln_base": ln_b,
+        "expr": expr,
+    }
+
+
 def shortcut_mul_small(a: int, b: int) -> Optional[int]:
     """Exact shortcuts for common cases to reduce arithmetic work/representation."""
     a = int(a); b = int(b)

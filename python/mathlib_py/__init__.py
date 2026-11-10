@@ -639,6 +639,7 @@ from .shortcuts import (
     shorten_hash,
     shortcut_div_small,
     shortcut_mul_small,
+    simplify_log,
     unpack_u64,
 )
 
