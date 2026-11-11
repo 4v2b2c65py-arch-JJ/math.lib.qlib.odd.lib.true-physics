@@ -270,7 +270,99 @@ def compress_qbits(qbits: Sequence[Any], values: Optional[Sequence[float]] = Non
             "log_samples": log_sample_features([abs(f) if f != 0 else 0.0 for f in feats], base=base),
             "compressed": compress_vector_log(feats, base=base),
         })
-    return {"count": len(mats), "base": base, "qbits": mats}
+    contextual = attach_strings_around_rings_and_stings(qbits, values=values, base=base)
+    return {"count": len(mats), "base": base, "qbits": mats, "contextual_analysis": contextual}
+
+
+def attach_strings_around_rings_and_stings(qbits: Sequence[Any], values: Optional[Sequence[float]] = None,
+                                           base: float = 10.0, depth_levels: int = 4) -> Dict[str, Any]:
+    """New contextual analysis: attach strings around rings and stings in depth.
+
+    - rings: phase-binned circular groupings of qbits/features
+    - strings: attached sequences (hash/value/log-sample strings) around each ring/sting
+    - stings: sharp/depth outlier points (high magnitude/phase discontinuity) with attached strings
+    - depth: layered depth metrics and per-level context
+    """
+    n = len(qbits)
+    ring_bins = 8
+    rings: List[Dict[str, Any]] = [{"ring": i, "phase_center": (2 * math.pi * i / ring_bins), "members": [], "strings": []} for i in range(ring_bins)]
+    stings: List[Dict[str, Any]] = []
+    depth_layers: List[Dict[str, Any]] = []
+
+    all_feats = []
+    for i, qb in enumerate(qbits):
+        v = None if values is None or i >= len(values) else float(values[i])
+        feats = qbit_to_features(qb, v)
+        all_feats.append(feats)
+        phase = float(getattr(qb, "phase", 0.0)) % (2 * math.pi)
+        alpha = float(getattr(qb, "alpha", 0.0))
+        beta = float(getattr(qb, "beta", 0.0))
+        bidx = int((phase / (2 * math.pi)) * ring_bins) % ring_bins
+        mag = abs(v) if v is not None else (alpha * alpha + beta * beta) ** 0.5
+        ls = log_sample_features([mag if mag != 0 else 0.0], base=base)
+        expr = ls[0].get("expr") if ls and isinstance(ls[0], dict) else None
+        # string attached around this point/ring
+        ring_string = {
+            "idx": i,
+            "value": v,
+            "alpha": alpha,
+            "beta": beta,
+            "phase": phase,
+            "log_expr": expr,
+            "log_sample": ls[0] if ls else None,
+            "feature_blob": compress_vector_log(feats, base=base).get("blob"),
+        }
+        rings[bidx]["members"].append(i)
+        rings[bidx]["strings"].append(ring_string)
+
+        # sting: sharp points (large magnitude or extreme phase imbalance) in depth
+        imbalance = abs(alpha - beta)
+        sting_score = imbalance + min(10.0, (math.log10(mag) if mag and mag > 0 else 0.0) / 10.0)
+        if sting_score > 0.75 or mag > 1e6 or (v is not None and abs(v) > 1000):
+            stings.append({
+                "idx": i,
+                "ring": bidx,
+                "depth_hint": sting_score,
+                "value": v,
+                "imbalance": imbalance,
+                "strings": [ring_string],
+            })
+
+    # depth layers: contextual analysis in depth across rings/strings/stings
+    for d in range(max(1, int(depth_levels))):
+        layer = {
+            "depth": d,
+            "ring_span": [r for r in rings if r["members"]],
+            "ring_count": sum(1 for r in rings if r["members"]),
+            "string_count": sum(len(r["strings"]) for r in rings),
+            "sting_count": len([s for s in stings if s.get("depth_hint", 0) >= d * 0.25]),
+        }
+        # attach summarized strings around rings at this depth
+        layer["attached_strings"] = [
+            {"ring": r["ring"], "count": len(r["strings"]), "sample": (r["strings"][0] if r["strings"] else None)}
+            for r in rings if r["members"]
+        ]
+        depth_layers.append(layer)
+
+    # ring-level aggregates
+    for r in rings:
+        if r["strings"]:
+            vals = [s["value"] for s in r["strings"] if s.get("value") is not None]
+            r["summary"] = {
+                "count": len(r["strings"]),
+                "mean_value": (sum(vals) / len(vals)) if vals else None,
+            }
+        else:
+            r["summary"] = {"count": 0}
+
+    return {
+        "type": "new_contextual_analysis",
+        "rings": rings,
+        "strings": {f"ring_{r['ring']}": r["strings"] for r in rings if r["strings"]},
+        "stings": stings,
+        "depth": {"levels": depth_layers, "max_depth": max(1, int(depth_levels)), "in_depth": True},
+        "counts": {"qbits": n, "rings_active": sum(1 for r in rings if r["members"]), "strings": sum(len(r["strings"]) for r in rings), "stings": len(stings)},
+    }
 
 
 def fit_and_compress_net(qbits: Sequence[Any], targets: Sequence[float], values: Optional[Sequence[float]] = None,
@@ -320,6 +412,9 @@ def fit_and_compress_net(qbits: Sequence[Any], targets: Sequence[float], values:
     prev_notes = prev_state.get("self_improving_notes", {}).get("notes") if isinstance(prev_state.get("self_improving_notes"), dict) else prev_state.get("notes")
     notes = self_improving_notes(gauge.to_dict(), net_gain, previous_notes=prev_notes, goal=goal)
 
+    # new contextual analysis: attach strings around rings and stings in depth
+    contextual_analysis = attach_strings_around_rings_and_stings(qbits, values=values, base=base)
+
     result = {
         "neuron": {"weights": neuron.weights, "bias": neuron.bias, "dim": len(neuron.weights)},
         "fit": fit_stats,
@@ -338,6 +433,7 @@ def fit_and_compress_net(qbits: Sequence[Any], targets: Sequence[float], values:
         "compute_gauge": gauge.to_dict(),
         "net_gain": net_gain,
         "self_improving_notes": notes,
+        "contextual_analysis": contextual_analysis,
     }
 
     if state_path:
@@ -350,6 +446,11 @@ def fit_and_compress_net(qbits: Sequence[Any], targets: Sequence[float], values:
                 "net_gain": net_gain,
                 "last_input_count": len(qbits),
                 "goal": goal,
+                "contextual_analysis": {
+                    "counts": contextual_analysis.get("counts"),
+                    "depth": contextual_analysis.get("depth"),
+                    "stings_count": len(contextual_analysis.get("stings", [])),
+                },
             }, indent=2), encoding="utf-8")
             result["state_path"] = str(p)
         except Exception as e:
