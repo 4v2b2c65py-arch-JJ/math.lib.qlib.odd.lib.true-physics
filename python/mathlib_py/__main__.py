@@ -29,13 +29,15 @@ def main(argv=None):
         from .custom_runtime import _cli as runtime_cli
         return runtime_cli(argv[1:])
 
-    # Neuron fit + qbit/log-sample compression: python -m mathlib_py neuron-fit
-    if argv and argv[0] in ("neuron-fit", "neuron", "qbit-fit", "qbit-compress"):
-        from .neuron_fit import fit_and_compress_net, compress_qbits
-        from . import MathOp, build_row_op
+    # Lore/role/basis decoding over qbit outputs/contextual analysis
+    if argv and argv[0] in ("lore-decode", "lore", "decode-lore"):
+        from .lore_decode import decode_lore_role_basis, decode_grid_lore_role_basis
+        from . import MathOp, build_grid_ops
+        from .neuron_fit import attach_strings_around_rings_and_stings
         op = MathOp.MUL
         base_v = 8
-        xs = [1, 2, 3, 4, 5, 8, 13]
+        xs = [1, 2, 4, 8]
+        depth = None
         i = 1
         while i < len(argv):
             if argv[i] == "--op" and i + 1 < len(argv):
@@ -45,25 +47,22 @@ def main(argv=None):
                 base_v = int(argv[i + 1]); i += 2
             elif argv[i] == "--xs" and i + 1 < len(argv):
                 xs = [int(x) for x in argv[i + 1].split(",") if x.strip()]; i += 2
+            elif argv[i] == "--depth" and i + 1 < len(argv):
+                depth = int(argv[i + 1]); i += 2
             else:
                 i += 1
+        g = build_grid_ops([(op, base_v, x) for x in xs])
+        grid_lore = decode_grid_lore_role_basis(g, base=10.0, depth=depth)
         qbits = []
-        targets = []
         values = []
-        for x in xs:
-            row = build_row_op(op, base_v, x)
-            for cell in row.cells:
-                if getattr(cell, "qbit", None) is not None:
-                    qbits.append(cell.qbit)
-                    targets.append(float(cell.value))
-                    values.append(float(cell.value))
-        if not qbits:
-            print(json.dumps({"ok": False, "error": "no qbits produced"}))
-            return 1
-        res = fit_and_compress_net(qbits, targets, values=values, base=10.0, epochs=10, mantissa_bits=8)
-        res["input"] = {"op": op.value, "base": base_v, "xs": xs, "qbit_count": len(qbits)}
-        res["qbit_compression_preview"] = compress_qbits(qbits[:3], values[:3], base=10.0)
-        print(json.dumps(res, indent=2, default=str))
+        outs = [c for r in (g.rows[:depth] if depth is not None else g.rows) for c in r.cells]
+        for cell in outs:
+            if getattr(cell, "qbit", None) is not None:
+                qbits.append(cell.qbit)
+                values.append(float(cell.value))
+        ctx = attach_strings_around_rings_and_stings(qbits, values=values, base=10.0) if qbits else None
+        ctx_lore = decode_lore_role_basis(outputs=outs, contextual_analysis=ctx, base=10.0) if ctx else None
+        print(json.dumps({"grid_lore": grid_lore, "contextual_lore": ctx_lore, "input": {"op": op.value, "base": base_v, "xs": xs, "depth": depth}}, indent=2, default=str))
         return 0
 
     # ASCII video mode: python -m mathlib_py ascii --op mul --base 8 --xs 1,2,4,8,100,1000

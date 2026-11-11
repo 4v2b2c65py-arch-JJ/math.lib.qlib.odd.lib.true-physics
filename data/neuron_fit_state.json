@@ -1,28 +1,28 @@
 {
   "compute_gauge": {
-    "baseline_ops_per_sec": 28398.573985891995,
-    "ops_per_sec": 28701.169572660085,
-    "throughput_percentage": 101.06553092038499,
+    "baseline_ops_per_sec": 28701.169572660085,
+    "ops_per_sec": 24887.561552272768,
+    "throughput_percentage": 86.71270865553838,
     "above_30": true,
-    "samples": 4,
-    "ops": 280,
-    "elapsed_ns": 9755700,
+    "samples": 2,
+    "ops": 140,
+    "elapsed_ns": 5625300,
     "updates": 1
   },
   "self_improving_notes": {
     "current": {
-      "level": 1,
-      "timestamp_ns": 1794359634813031800,
-      "throughput_percentage": 101.06553092038499,
+      "level": 2,
+      "timestamp_ns": 1794359810487916600,
+      "throughput_percentage": 86.71270865553838,
       "above_30": true,
       "net_gain": {
-        "compression_ratio": 2.6666666666666665,
-        "gain_ratio": 1.6666666666666665,
+        "compression_ratio": 2.604651162790698,
+        "gain_ratio": 1.6046511627906979,
         "improved": true
       },
       "foreseeable_result": true,
       "goal": "foreseeable result that future holds",
-      "summary": "Compute gauge 101.07% (above 30). Net gain positive; goal 'foreseeable result that future holds' is foreseeable."
+      "summary": "Compute gauge 86.71% (above 30). Net gain positive; goal 'foreseeable result that future holds' is foreseeable."
     },
     "notes": [
       {
@@ -35,36 +35,44 @@
       },
       {
         "level": 1,
-        "timestamp_ns": 1794359634813031800,
-        "throughput_percentage": 101.06553092038499,
+        "refined_at_level": 2,
+        "timestamp_ns": 1794359810487916600,
+        "refined_summary": "[refined@2] Compute gauge 101.07% (above 30). Net gain positive; goal 'foreseeable result that future holds' is foreseeable. -> throughput 86.71%, net gain sustained.",
+        "throughput_percentage": 86.71270865553838,
+        "foreseeable_result": true
+      },
+      {
+        "level": 2,
+        "timestamp_ns": 1794359810487916600,
+        "throughput_percentage": 86.71270865553838,
         "above_30": true,
         "net_gain": {
-          "compression_ratio": 2.6666666666666665,
-          "gain_ratio": 1.6666666666666665,
+          "compression_ratio": 2.604651162790698,
+          "gain_ratio": 1.6046511627906979,
           "improved": true
         },
         "foreseeable_result": true,
         "goal": "foreseeable result that future holds",
-        "summary": "Compute gauge 101.07% (above 30). Net gain positive; goal 'foreseeable result that future holds' is foreseeable."
+        "summary": "Compute gauge 86.71% (above 30). Net gain positive; goal 'foreseeable result that future holds' is foreseeable."
       }
     ],
-    "count": 2,
+    "count": 3,
     "recursively_improved": true,
     "foreseeable_result": true,
     "above_30": true
   },
   "net_gain": {
-    "compression_ratio": 2.6666666666666665,
-    "gain_ratio": 1.6666666666666665,
+    "compression_ratio": 2.604651162790698,
+    "gain_ratio": 1.6046511627906979,
     "improved": true
   },
-  "last_input_count": 4,
+  "last_input_count": 2,
   "goal": "foreseeable result that future holds",
   "contextual_analysis": {
     "counts": {
-      "qbits": 4,
-      "rings_active": 4,
-      "strings": 4,
+      "qbits": 2,
+      "rings_active": 2,
+      "strings": 2,
       "stings": 0
     },
     "depth": {
@@ -105,38 +113,6 @@
               }
             },
             {
-              "ring": 1,
-              "phase_center": 0.7853981633974483,
-              "members": [
-                2
-              ],
-              "strings": [
-                {
-                  "idx": 2,
-                  "value": 16.0,
-                  "alpha": 0.33127829401258463,
-                  "beta": 0.9435330899953173,
-                  "phase": 1.413716694115407,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
-            },
-            {
               "ring": 2,
               "phase_center": 1.5707963267948966,
               "members": [
@@ -167,42 +143,10 @@
                 "count": 1,
                 "mean_value": 8.0
               }
-            },
-            {
-              "ring": 7,
-              "phase_center": 5.497787143782138,
-              "members": [
-                3
-              ],
-              "strings": [
-                {
-                  "idx": 3,
-                  "value": 16.0,
-                  "alpha": 0.7346222898257416,
-                  "beta": 0.6784763012008482,
-                  "phase": 6.14355896702004,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
             }
           ],
-          "ring_count": 4,
-          "string_count": 4,
+          "ring_count": 2,
+          "string_count": 2,
           "sting_count": 0,
           "attached_strings": [
             {
@@ -229,29 +173,6 @@
               }
             },
             {
-              "ring": 1,
-              "count": 1,
-              "sample": {
-                "idx": 2,
-                "value": 16.0,
-                "alpha": 0.33127829401258463,
-                "beta": 0.9435330899953173,
-                "phase": 1.413716694115407,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-              }
-            },
-            {
               "ring": 2,
               "count": 1,
               "sample": {
@@ -272,29 +193,6 @@
                   "ok": true
                 },
                 "feature_blob": "1:-1:240;1:-1:62;1:-1:217;-1:-1:113;1:-1:198;1:-1:255"
-              }
-            },
-            {
-              "ring": 7,
-              "count": 1,
-              "sample": {
-                "idx": 3,
-                "value": 16.0,
-                "alpha": 0.7346222898257416,
-                "beta": 0.6784763012008482,
-                "phase": 6.14355896702004,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
               }
             }
           ]
@@ -335,38 +233,6 @@
               }
             },
             {
-              "ring": 1,
-              "phase_center": 0.7853981633974483,
-              "members": [
-                2
-              ],
-              "strings": [
-                {
-                  "idx": 2,
-                  "value": 16.0,
-                  "alpha": 0.33127829401258463,
-                  "beta": 0.9435330899953173,
-                  "phase": 1.413716694115407,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
-            },
-            {
               "ring": 2,
               "phase_center": 1.5707963267948966,
               "members": [
@@ -397,42 +263,10 @@
                 "count": 1,
                 "mean_value": 8.0
               }
-            },
-            {
-              "ring": 7,
-              "phase_center": 5.497787143782138,
-              "members": [
-                3
-              ],
-              "strings": [
-                {
-                  "idx": 3,
-                  "value": 16.0,
-                  "alpha": 0.7346222898257416,
-                  "beta": 0.6784763012008482,
-                  "phase": 6.14355896702004,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
             }
           ],
-          "ring_count": 4,
-          "string_count": 4,
+          "ring_count": 2,
+          "string_count": 2,
           "sting_count": 0,
           "attached_strings": [
             {
@@ -459,29 +293,6 @@
               }
             },
             {
-              "ring": 1,
-              "count": 1,
-              "sample": {
-                "idx": 2,
-                "value": 16.0,
-                "alpha": 0.33127829401258463,
-                "beta": 0.9435330899953173,
-                "phase": 1.413716694115407,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-              }
-            },
-            {
               "ring": 2,
               "count": 1,
               "sample": {
@@ -502,29 +313,6 @@
                   "ok": true
                 },
                 "feature_blob": "1:-1:240;1:-1:62;1:-1:217;-1:-1:113;1:-1:198;1:-1:255"
-              }
-            },
-            {
-              "ring": 7,
-              "count": 1,
-              "sample": {
-                "idx": 3,
-                "value": 16.0,
-                "alpha": 0.7346222898257416,
-                "beta": 0.6784763012008482,
-                "phase": 6.14355896702004,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
               }
             }
           ]
@@ -565,38 +353,6 @@
               }
             },
             {
-              "ring": 1,
-              "phase_center": 0.7853981633974483,
-              "members": [
-                2
-              ],
-              "strings": [
-                {
-                  "idx": 2,
-                  "value": 16.0,
-                  "alpha": 0.33127829401258463,
-                  "beta": 0.9435330899953173,
-                  "phase": 1.413716694115407,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
-            },
-            {
               "ring": 2,
               "phase_center": 1.5707963267948966,
               "members": [
@@ -627,42 +383,10 @@
                 "count": 1,
                 "mean_value": 8.0
               }
-            },
-            {
-              "ring": 7,
-              "phase_center": 5.497787143782138,
-              "members": [
-                3
-              ],
-              "strings": [
-                {
-                  "idx": 3,
-                  "value": 16.0,
-                  "alpha": 0.7346222898257416,
-                  "beta": 0.6784763012008482,
-                  "phase": 6.14355896702004,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
             }
           ],
-          "ring_count": 4,
-          "string_count": 4,
+          "ring_count": 2,
+          "string_count": 2,
           "sting_count": 0,
           "attached_strings": [
             {
@@ -689,29 +413,6 @@
               }
             },
             {
-              "ring": 1,
-              "count": 1,
-              "sample": {
-                "idx": 2,
-                "value": 16.0,
-                "alpha": 0.33127829401258463,
-                "beta": 0.9435330899953173,
-                "phase": 1.413716694115407,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-              }
-            },
-            {
               "ring": 2,
               "count": 1,
               "sample": {
@@ -732,29 +433,6 @@
                   "ok": true
                 },
                 "feature_blob": "1:-1:240;1:-1:62;1:-1:217;-1:-1:113;1:-1:198;1:-1:255"
-              }
-            },
-            {
-              "ring": 7,
-              "count": 1,
-              "sample": {
-                "idx": 3,
-                "value": 16.0,
-                "alpha": 0.7346222898257416,
-                "beta": 0.6784763012008482,
-                "phase": 6.14355896702004,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
               }
             }
           ]
@@ -795,38 +473,6 @@
               }
             },
             {
-              "ring": 1,
-              "phase_center": 0.7853981633974483,
-              "members": [
-                2
-              ],
-              "strings": [
-                {
-                  "idx": 2,
-                  "value": 16.0,
-                  "alpha": 0.33127829401258463,
-                  "beta": 0.9435330899953173,
-                  "phase": 1.413716694115407,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
-            },
-            {
               "ring": 2,
               "phase_center": 1.5707963267948966,
               "members": [
@@ -857,42 +503,10 @@
                 "count": 1,
                 "mean_value": 8.0
               }
-            },
-            {
-              "ring": 7,
-              "phase_center": 5.497787143782138,
-              "members": [
-                3
-              ],
-              "strings": [
-                {
-                  "idx": 3,
-                  "value": 16.0,
-                  "alpha": 0.7346222898257416,
-                  "beta": 0.6784763012008482,
-                  "phase": 6.14355896702004,
-                  "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                  "log_sample": {
-                    "x": 16.0,
-                    "base": 10.0,
-                    "value": 1.2041199826559248,
-                    "exp10": 1,
-                    "mantissa": 1.6,
-                    "expr": "log10(16.0) = 1 + log10(1.6)",
-                    "sign": 1,
-                    "ok": true
-                  },
-                  "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
-                }
-              ],
-              "summary": {
-                "count": 1,
-                "mean_value": 16.0
-              }
             }
           ],
-          "ring_count": 4,
-          "string_count": 4,
+          "ring_count": 2,
+          "string_count": 2,
           "sting_count": 0,
           "attached_strings": [
             {
@@ -919,29 +533,6 @@
               }
             },
             {
-              "ring": 1,
-              "count": 1,
-              "sample": {
-                "idx": 2,
-                "value": 16.0,
-                "alpha": 0.33127829401258463,
-                "beta": 0.9435330899953173,
-                "phase": 1.413716694115407,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:66;1:-1:239;1:-1:252;1:-1:16;-1:-1:193;1:-1:255"
-              }
-            },
-            {
               "ring": 2,
               "count": 1,
               "sample": {
@@ -963,29 +554,6 @@
                 },
                 "feature_blob": "1:-1:240;1:-1:62;1:-1:217;-1:-1:113;1:-1:198;1:-1:255"
               }
-            },
-            {
-              "ring": 7,
-              "count": 1,
-              "sample": {
-                "idx": 3,
-                "value": 16.0,
-                "alpha": 0.7346222898257416,
-                "beta": 0.6784763012008482,
-                "phase": 6.14355896702004,
-                "log_expr": "log10(16.0) = 1 + log10(1.6)",
-                "log_sample": {
-                  "x": 16.0,
-                  "base": 10.0,
-                  "value": 1.2041199826559248,
-                  "exp10": 1,
-                  "mantissa": 1.6,
-                  "expr": "log10(16.0) = 1 + log10(1.6)",
-                  "sign": 1,
-                  "ok": true
-                },
-                "feature_blob": "1:-1:180;1:-1:164;-1:-1:11;1:-1:252;1:-2:196;1:-1:255"
-              }
             }
           ]
         }
@@ -994,5 +562,13 @@
       "in_depth": true
     },
     "stings_count": 0
+  },
+  "lore_role_basis": {
+    "counts": {
+      "qbits": 2,
+      "rings_active": 2,
+      "strings": 2,
+      "stings": 0
+    }
   }
 }

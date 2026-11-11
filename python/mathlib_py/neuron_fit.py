@@ -414,6 +414,12 @@ def fit_and_compress_net(qbits: Sequence[Any], targets: Sequence[float], values:
 
     # new contextual analysis: attach strings around rings and stings in depth
     contextual_analysis = attach_strings_around_rings_and_stings(qbits, values=values, base=base)
+    # lore/role/basis decoding over contextual analysis
+    try:
+        from .lore_decode import decode_lore_role_basis
+        lore_role_basis = decode_lore_role_basis(outputs=None, contextual_analysis=contextual_analysis, base=base)
+    except Exception:
+        lore_role_basis = None
 
     result = {
         "neuron": {"weights": neuron.weights, "bias": neuron.bias, "dim": len(neuron.weights)},
@@ -434,6 +440,7 @@ def fit_and_compress_net(qbits: Sequence[Any], targets: Sequence[float], values:
         "net_gain": net_gain,
         "self_improving_notes": notes,
         "contextual_analysis": contextual_analysis,
+        "lore_role_basis": lore_role_basis,
     }
 
     if state_path:
@@ -451,6 +458,7 @@ def fit_and_compress_net(qbits: Sequence[Any], targets: Sequence[float], values:
                     "depth": contextual_analysis.get("depth"),
                     "stings_count": len(contextual_analysis.get("stings", [])),
                 },
+                "lore_role_basis": ({"counts": (lore_role_basis or {}).get("contextual", {}).get("counts") if lore_role_basis else None}),
             }, indent=2), encoding="utf-8")
             result["state_path"] = str(p)
         except Exception as e:
